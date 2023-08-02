@@ -1,0 +1,30 @@
+/* Contact */
+#contact {
+    /* background-color: #C06145; */
+    padding: 2% 5%;
+}
+
+.contact-1 {
+    padding: 10px;
+    /* background-color: #C06145; */
+}
+
+.contact-2 {
+    background-color: #FAE3D3;
+    border-radius: 5px;
+}
+
+.bold {
+    color: #C06145;
+}
+
+.button-colo {
+    background-color: #C06145;
+    border-radius: 10px;
+    color: #FAE3D3;
+    border-color: #C06145;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    /* font-size: 20px; */
+}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar %}
+<link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+<link rel="stylesheet" href="{% static 'signup.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Sign -Up -->
+<div class="wrapper">
+    <div class="logo">
+        <img src="{% static 'user-solid.svg' %}" alt="Bhuamrit logo" class="user-solid">
+    </div>
+    <div class="text-center mt-4 name">
+        Signup
+    </div>
+    <form class="p-3 mt-3" action="/signup" method="POST">
+        {% csrf_token %}
+
+        {% if error%}
+        <div class="alert alert-danger" role="alert">
+            {{error}}
+        </div>
+        {% endif %}
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="firstname" id="firstname" placeholder="First Name" value="{{values.first_name}}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="Text" name="lastname" id="lastname" placeholder="Last Name" value="{{values.last_name}}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-phone"></span>
+            <input type="tel" name="phone" id="phone" placeholder="Phone" value="{{values.phone}}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-envelope"></span>
+            <input type="email" name="email" id="email" placeholder="Email" value="{{values.email}}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <div class="mb-3 form-check or">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label d-grid gap-2" for="exampleCheck1">Check me out</label>
+        </div>
+        <button class="btn mt-3">Create an account</button>
+    </form>
+</div>
+
+{% endblock %}

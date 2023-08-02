@@ -1,0 +1,39 @@
+/* Footer */
+
+.footer {
+    background-color: #FAE3D3;
+    padding: 0;
+}
+
+.row-footer {
+    padding: 30px 5% 0 5%;
+}
+
+.footer-col-1 p {
+    display: inline-block;
+    align-items: center;
+}
+
+.img-footer {
+    margin-left: 50px;
+    width: 200px;
+    height: 200px;
+}
+
+.footer-lis li {
+    /* background-color: aqua; */
+    padding-bottom: 5px;
+}
+
+.footer-social-img {
+    padding: 5px 20px 30px 0;
+}
+
+.footer-hr {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.footer-bottom {
+    padding: 20px 20px 15px 20px;
+}

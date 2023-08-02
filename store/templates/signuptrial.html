@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar %}
+<link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+<link rel="stylesheet" href="{% static 'signup.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Sign -Up -->
+<div class="wrapper">
+    <div class="logo">
+        <img src="{% static 'user-solid.svg' %}" alt="Bhuamrit logo" class="user-solid">
+    </div>
+    <div class="text-center mt-4 name">
+        Signup
+    </div>
+    <form class="p-3 mt-3" action="/signup" method="POST">
+        {% csrf_token %}
+
+        {% if error%}
+        <div class="alert alert-danger" role="alert">
+            {{error}}
+        </div>
+        {% endif %}
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="firstName" id="firstName" placeholder="First Name" value="{{values.first_name}}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="Text" name="lastName" id="lastName" placeholder="Last Name" value="{{values.last_name}}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-phone"></span>
+            <input type="tel" name="Telephone" id="Telephone" placeholder="Phone" value="{{values.phone}}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-envelope"></span>
+            <input type="email" name="eMail" id="eMail" placeholder="Email" value="{{values.email}}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="pwd" placeholder="Password">
+        </div>
+        <div class="mb-3 form-check or">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label d-grid gap-2" for="exampleCheck1">Check me out</label>
+        </div>
+        <button class="btn mt-3">Create an account</button>
+    </form>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <div class="p-3 m-3">
+
+
+        <div class="col-lg-5 rounded mx-auto border pt-4">
+            <div class="text-center col">
+
+                <img src="https://th.bing.com/th/id/Rd51d7c0fde6d96a31538a86cbd57f3c0?rik=%2fTJxRkU2V371QQ&riu=http%3a%2f%2ftechnologyend.com%2fwp-content%2fuploads%2f2015%2f11%2fwhy-shop-online.jpg&ehk=v1KiYT0i5U1ABCRueDSdLqnazh2BdlVD89Z4qXE0Kgs%3d&risl=&pid=ImgRaw"
+                    alt="" class="" style="height: 150px;">
+                <!-- <hr> -->
+                <hr>
+            </div>
+            <h3 class="alert alert-success rounded-pill" style="text-align:center">Create an Account</h3>
+            <form action="/signup" method="POST">
+
+                {% csrf_token %}
+
+                {% if error%}
+                <div class="alert alert-danger" role="alert">
+                    {{error}}
+                </div>
+                {% endif %}
+                <!-- firstname -->
+                <div class="form-group">
+                    <label for="">First Name</label>
+                    <input type="text" name="firstname" id="" value="{{values.first_name}}"
+                        class="form-control form-control-sm" placeholder="">
+                </div>
+
+                <!-- last name -->
+                <div class="form-group">
+                    <label for="">Last Name</label>
+                    <input type="text" name="lastname" id="" value="{{values.last_name}}"
+                        class="form-control form-control-sm">
+                </div>
+
+                <!-- phone -->
+                <div class="form-group">
+                    <label for="">Phone</label>
+                    <input type="text" name="phone" id="" class="form-control form-control-sm" value="{{values.phone}}"
+                        placeholder="9876543210">
+                </div>
+                <!-- email -->
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input required type="email" name="email" id="" value="{{values.email}}"
+                        class=" form-control-sm form-control" placeholder="abc@gmail.com">
+                </div>
+
+
+                <!-- password -->
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" name="password" id="" class="form-control form-control-sm">
+                </div>
+
+                <!--Checkme button-->
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label d-grid gap-2" for="exampleCheck1">Check me out</label>
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-sm btn-success col-lg-12">Create an account</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

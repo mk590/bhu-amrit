@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block navbar %}
+<style>
+    .nav-buttons-solid {
+        background-color: #c06145;
+        color: white;
+
+    }
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<!-- Login -->
+<div class="wrapper">
+    <div class="logo">
+        <img src="{% static 'user-solid.svg' %}" alt="Bhuamrit logo" class="user-solid">
+    </div>
+    <div class="text-center mt-4 name">
+        BHU-AMRIT
+    </div>
+    <form class="p-3 mt-3" action="/login" method="POST">
+        {% csrf_token %}
+
+        {% if error%}
+        <div class="alert alert-danger" role="alert">
+            {{error}}
+        </div>
+        {% endif %}
+        <!-- e-mail  -->
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-envelope"></span>
+            <input type="email" name="email" id="email" placeholder="Email" value="{{values.email}}">
+
+        </div>
+
+        <!-- Password -->
+        <div class="form-field d-flex align-items-center">
+
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="pwd" placeholder="Password">
+        </div>
+        <button class="btn mt-3">Login</button>
+
+    </form>
+    <div class="text-center fs-6 ">
+        <a href="#">Forget password?</a> <span class="or">or</span> <a href="#">Sign up</a>
+    </div>
+</div>
+
+{% endblock %}

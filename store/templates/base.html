@@ -1,0 +1,307 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}"> -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{% static 'stylesbase.css' %}">
+  <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'footer.css' %}">
+
+  <title>E-commerce Website</title>
+  <!-- <style>
+    nav {
+      background-color: #FAE3D3;
+    }
+
+    .nav-item {
+      font-size: px;
+    }
+
+    .nav-buttons {
+      border-color: #C06145;
+      border-radius: 0;
+      width: 100px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 10px;
+      color: #C06145;
+    }
+
+    .nav-buttons:hover {
+      background-color: #C06145;
+    }
+
+    .nav-buttons:active {
+      background-color: white;
+    }
+
+    /* LOGIN Page */
+
+    .wrapper {
+      max-width: 350px;
+      min-height: 500px;
+      margin: 80px auto;
+      padding: 40px 30px 30px 30px;
+      background-color: #C06145;
+      border-radius: 15px;
+      box-shadow: 13px 13px 20px #FAE3D3, -20px -20px 20px #FAE3D3;
+    }
+
+    .user-solid {
+      width: 70px;
+      height: 70px;
+    }
+
+    .logo {
+      width: 100px;
+      margin: auto;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100px;
+      border-bottom-right-radius: 20%;
+      border-bottom-left-radius: 20%;
+      color: green;
+      /* box-shadow: 0px 0px 1px #5f5f5f,
+        0px 0px 0px 1px #ecf0f3,
+        1px 1px 1px #a7aaa7,
+        -1px -1px 4px #fff; */
+    }
+
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #FAE3D3;
+      opacity: 1;
+      /* Firefox */
+    }
+
+    .wrapper .name {
+      font-weight: 600;
+      font-size: 1.4rem;
+      letter-spacing: 1.3px;
+      padding-left: 10px;
+      color: #FAE3D3;
+    }
+
+    .wrapper .form-field input {
+      width: 100%;
+      display: block;
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 1.2rem;
+      color: #FAE3D3;
+      padding: 10px 15px 10px 10px;
+      /* border: 1px solid red; */
+    }
+
+    .wrapper .form-field {
+      padding-left: 10px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      color: #FAE3D3;
+      box-shadow: inset 3px 3px 2px #FAE3D3, inset -3px -1px 1px #FAE3D3;
+
+    }
+
+    .wrapper .form-field .fas {
+      color: #FAE3D3;
+    }
+
+    .wrapper .btn {
+      box-shadow: none;
+      width: 100%;
+      height: 40px;
+      background-color: #FAE3D3;
+      border-color: #C06145;
+      color: #C06145;
+      border-radius: 25px;
+      /* box-shadow: 3px 3px 3px #b1b1b1,
+        -3px -3px 3px #fff; */
+      letter-spacing: 1.3px;
+    }
+
+    .wrapper .btn:hover {
+      background-color: white;
+    }
+
+    .wrapper a {
+      text-decoration: none;
+      font-size: 0.8rem;
+      color: #03A9F4;
+    }
+
+    .wrapper a:hover {
+      color: #039BE5;
+    }
+
+    .or {
+      color: #FAE3D3;
+    }
+
+    @media(max-width: 380px) {
+      .wrapper {
+        margin: 30px 20px;
+        padding: 40px 15px 15px 15px;
+      }
+    }
+  </style> -->
+  <script src="https://kit.fontawesome.com/52f4f48b5e.js" crossorigin="anonymous"></script>
+  {% block navbar%}
+  {%endblock%}
+</head>
+
+<body>
+  <!-- navbar -->
+
+  <nav class="one-edge-shadow navbar navbar-light sticky-top navbar navbar-expand-lg text-white">
+    <a class="navbar-brand ms-3 text-dark " href="/">
+      <img src="{% static 'logo.png' %}" style="width:75px;height:75px"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a href="/store" class="btn nav-buttons" role="button" aria-disabled="true">Store<span
+              class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+
+
+      <ul class=" navbar-nav ms-auto my-2 my-lg-0 ">
+
+        <li class="nav-item active">
+          <a href="/contact" class="btn nav-buttons" role="button" aria-disabled="true">Contact
+            Us<span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active">
+          <a href="/cart" class="btn nav-buttons" role="button" aria-disabled="true">Cart
+            <!-- <span class="badge badge-success">{{request.session.cart.keys|length}}</span> -->
+            <span class="sr-only">(current)</span>
+          </a>
+          <!-- <a class="nav-link" href="/cart">Cart  -->
+          <span class="badge badge-success"></span>
+        </li>
+        {% if request.session.customer %}
+
+        <li class="nav-item active ">
+          <a href="/orders" class="btn nav-buttons" role="button" aria-disabled="true">Orders
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="/logout" class="btn nav-buttons" role="button" aria-disabled="true">Logout
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <!-- <li class="nav-item active ">
+                <a href="#" class="btn nav-buttons" role="button" aria-disabled="true">Contact</a>
+            </li> -->
+
+        {% else %}
+        <li class="nav-item active">
+          <a href="/signup" class="btn nav-buttons" role="button" aria-disabled="true">Signup
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="/login" class="btn nav-buttons nav-buttons-solid" role="button" aria-disabled="true">Login
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+        {% endif %}
+
+      </ul>
+    </div>
+
+
+  </nav>
+  <!---->
+  {% block content %}{% endblock %}
+
+  <footer class="container-fluid footer">
+    <div class="row row-footer">
+      <div class="col-lg-3 col-md-6 col-sm-12 footer-col-1">
+        <img src="{% static 'logo.png' %}" alt="BHU-Amrit logo" class="img-footer">
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <ul style="list-style-type:none;" class="footer-lis">
+          <li>
+            <h4>CUSTOMER SERVICE</h4>
+          </li>
+          <li>About Us</li>
+          <li>FAQ</li>
+          <li>Contact Us</li>
+          <li>Track & manage my orders</li>
+          <li>Wishlist</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <ul style="list-style-type:none;" class="footer-lis">
+          <li>
+            <h4>SHOP PRODUCTS</h4>
+          </li>
+          <li>Organic jaggery poweder</li>
+          <li>Organic jaggery poweder</li>
+          <li>Organic jaggery poweder</li>
+          <li>Organic jaggery poweder</li>
+          <li>Organic jaggery poweder</li>
+          <li>Organic jaggery poweder</li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <h4>FOLLOW US</h4>
+        <img src="{% static 'Insta.png' %}" alt="instagram logo" class="footer-social-img">
+        <img src="{% static 'Twitter.png' %}" alt="Twitter logo" class="footer-social-img">
+        <img src="{% static 'Facebook.png' %}" alt="Facebook logo" class="footer-social-img"><br>
+        <h4>ADDRESS</h4>
+        <p>H. No-74, Village-Khubanpur, Bhagwanpur, Haridwar, Uttrakhand-247661</p>
+      </div>
+    </div>
+    <hr class="footer-hr">
+    <div class="d-flex flex-column flex-sm-row justify-content-between   footer-bottom ">
+      <p>Copyright &copy; 2023 Bhu Amrit Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3">Privacy Policy</li>
+        <li class="ms-3">Terms of services</li>
+        <li class="ms-3">Cookie Policy</li>
+      </ul>
+    </div>
+
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
